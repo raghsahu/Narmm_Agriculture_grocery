@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/bg_mobile"
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="16dp"
+
+                android:textColor="@color/colorPrimary"
+                android:text="@string/acouont"/>
+
+            <TextView
+
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/opificio"
+                android:textColor="@color/colorPrimary"
+                android:text="Enter 6 digit Protection Pin"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="100dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:id="@+id/one"
+                    android:maxLength="10"
+                    android:gravity="center"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+
+                    />
+
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:id="@+id/two"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+                    />
+
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:id="@+id/three"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+                    />
+
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/four"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/five"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+                <EditText
+                    android:background="@drawable/rectangle"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/six"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:fontFamily="@font/opificio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/space_5"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:fontFamily="@font/opificio"
+                android:textColor="@color/white"
+                android:text="Set Pin"
+                android:onClick="verifyotp"
+                android:background="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textSize="13dp"
+                android:fontFamily="@font/opificio"
+                android:textColor="@color/dark_gray"
+                android:text="@string/resend_otp"/>
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:fontFamily="@font/opificio"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:text="RESEND OTP"
+                android:background="@color/gray"
+
+                />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

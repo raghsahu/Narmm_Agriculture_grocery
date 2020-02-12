@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.drraisingh.narmm">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+<!--    <uses-permission-sdk-23 android:name="android.permission.RECEIVE_SMS" />-->
+<!--    <uses-permission-sdk-23 android:name="android.permission.READ_SMS" />-->
+<!--    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE" />-->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+<!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+
+    <application
+        android:name=".util.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.UpdateAcarActivity"></activity>
+        <activity android:name=".activity.FirstTimePayment" />
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.Thankyou" />
+        <activity android:name=".ShopRegistration" />
+        <activity android:name=".Fragment.UseFragmnet.ViewPdfFragment" />
+        <activity
+            android:name=".activity.Registrationpage"
+            android:label="Former Registration" />
+        <activity android:name=".activity.CompanyProfile" />
+        <activity
+            android:name=".OrderSuccess"
+            android:label="@string/thank_you" />
+        <activity android:name=".PaymentWallet" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".RegisterActivity" /> <!-- Firebase Notifications -->
+        <activity
+            android:name=".activity.ForgotActivity"
+            android:label="HFC MALL" />
+        <activity
+            android:name=".PincodeVerify"
+            android:label="Check Availability" /> <!-- ./Firebase Notifications -->
+        <activity android:name=".MobileVerify" />
+        <activity android:name=".activity.SetPinActivity" />
+        <activity android:name=".Productdescription" />
+        <activity android:name=".Wallet" />
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyOrder"
+            android:label="My Order" />
+        <activity android:name=".Notification" />
+        <activity android:name=".NotificationDetails" />
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_pI35PrZBGBcvcU" />
+        <meta-data
+            android:name="instamojo.orderauth.url"
+            android:value="http://ihisaab.in/NARMM/access_token.php" />
+    </application>
+
+</manifest>

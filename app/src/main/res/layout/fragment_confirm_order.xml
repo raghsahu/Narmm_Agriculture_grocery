@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/space_3"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPaymentdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5e5e5"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingTop="@dimen/space_10"
+            android:text="@string/tv_conf_order_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_below="@+id/txtPaymentdetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/space_3"
+                    app:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gray"
+                            android:padding="@dimen/space_4"
+                            android:text="Buyer name"
+                            android:textSize="@dimen/space_18" />
+
+                        <TextView
+                            android:id="@+id/text_buyer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/space_3"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/card_viewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/space_3"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardCornerRadius="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray"
+                                android:padding="@dimen/space_4"
+                                android:text="@string/tv_del_date_time"
+                                android:textSize="@dimen/space_18" />
+
+                            <TextView
+                                android:id="@+id/textTimeSlot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/space_3"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/card_viewb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/space_3"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardCornerRadius="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray"
+                                android:padding="@dimen/space_4"
+                                android:text="Shop address"
+                                android:textSize="@dimen/space_18" />
+
+                            <TextView
+                                android:id="@+id/txtAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/space_5"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/card_viewf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="@dimen/space_3"
+                        app:cardUseCompatPadding="true"
+                        card_view:cardCornerRadius="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray"
+                                android:padding="@dimen/space_4"
+                                android:text="@string/tv_total_item_amount"
+                                android:textSize="@dimen/space_18" />
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:weightSum="2"
+                                android:background="@color/dark_gray">
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:text="Item"
+                                    android:gravity="center_horizontal"
+                                    android:layout_weight=".7"/>
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:id="@+id/tv_quantity_bill"
+                                    android:text="Qty"
+                                    android:gravity="center_horizontal"
+                                    android:layout_weight=".3"/>
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:text="Price"
+                                    android:gravity="center_horizontal"
+                                    android:layout_weight=".5"/>
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="0dp"
+                                    android:text="Total"
+                                    android:gravity="center_horizontal"
+                                    android:layout_weight=".5"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/colorPrimary"
+                                >
+
+                            </View>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/rv_myorder"/>
+
+                            <TextView
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:text="0"
+                                android:id="@+id/txtTotal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/space_5"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    >
+                    <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:background="@drawable/xml_textbox_blue_bg"
+                        android:drawableLeft="@drawable/ic_timeslot_07"
+                        android:gravity="center_vertical"
+                        android:text="Shop Name"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/space_5"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <Button
+                android:id="@+id/buttonContinue"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xml_button"
+                android:text="@string/order_now"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/buttonContinue1"
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xml_button"
+                android:text="Place order"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

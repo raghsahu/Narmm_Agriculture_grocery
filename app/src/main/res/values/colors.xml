@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00670A</color>
+    <color name="colorPrimaryDark">#00670A</color>
+    <color name="colorAccent">#00670A</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#E3E3E3</color>
+    <color name="black">#545454</color>
+    <color name="dark_gray">#999999</color>
+
+    <color name="color_1">#1bdc84</color>
+    <color name="color_2">#1b4ddc</color>
+    <color name="color_3">#ff0023</color>
+
+    <color name="gen_black">#000000</color>
+
+    <color name="green">#00670A</color>
+
+    <color name="gen_white">#FFFFFF</color>
+    <color name="green_light">#00670A</color>
+    <color name="grey_light">#E0E0E0</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="whiteColor">#fff</color>
+    <color name="blackColor">#000</color>
+    <color name="editTextBack">#f2f2f2</color>
+    <color name="greenColor">#00670A</color>
+
+    <color name="yellow">#fff952</color>
+    <color name="yelow">#FCE903</color>
+    <color name="light_green">#7DF57D</color>
+    <color name="brown">#8B4513</color>
+
+    <color name="grey">#778899</color>
+    <color name="light_grey">#C1CDCD</color>
+    <color name="dark_grey">#373737</color>
+    <color name="crimsom">#d40000</color>
+    <color name="red">#FF1919</color>
+
+    <color name="Burgubndy">#800020</color>
+    <color name="Indigo">#4B0082 </color>
+    <color name="Purple">#800080</color>
+    <color name="Violet">#7F00FF</color>
+    <color name="jade">#00A86B</color>
+    <color name="eron">#00FF3F</color>
+
+</resources>

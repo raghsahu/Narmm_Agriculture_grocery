@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:visibility="gone"
+    android:layout_height="?android:attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@color/green"
+    android:id="@+id/rl_header">
+
+    <ImageView android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_30sdp"
+        android:id="@+id/iv_back"
+        app:srcCompat="@drawable/edit_back"
+        android:layout_centerVertical="true"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_header"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="@dimen/_14sdp"
+        android:text="Confirm Order"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </ScrollView>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="0.10">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_order_id"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        android:text="Order Id: "
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14sdp"
+        android:text="Payment status: Pending"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tv_order_details"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14sdp"
+        android:text=""
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_order_total"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        android:text="Pay Total Rs: "
+        android:layout_margin="@dimen/_10sdp"
+        android:textAlignment="center"/>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_3sdp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="#fff">
+
+
+    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_margin="@dimen/_10sdp" android:weightSum="1" android:layout_gravity="center">
+
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:layout_weight="0.4"
+        android:src="@drawable/cashdelivery"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14sdp"
+        android:text="Online"
+        android:layout_weight="0.2" android:layout_gravity="center"/>
+
+    <RadioButton android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/radio_online" android:textStyle="bold" android:textSize="@dimen/_14sdp" android:layout_weight="0.4" android:layout_gravity="center"/>
+
+</LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</LinearLayout>
+
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:id="@+id/footer"
+        android:layout_weight="0.90"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/confirmorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Pay Bill"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

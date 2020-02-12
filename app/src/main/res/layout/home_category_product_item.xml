@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/green"
+        android:id="@+id/tv_cate"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </TextView>
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:layout_marginTop="@dimen/space_10"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:id="@+id/spin_cont"
+        android:layout_weight="2"
+        android:background="@color/editTextBack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:dropDownWidth="match_parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

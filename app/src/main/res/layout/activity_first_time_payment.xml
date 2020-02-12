@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/bg_mobile"
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Pay membership charge:"/>
+
+            <TextView
+                android:id="@+id/tv_amt"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/opificio"
+                android:textColor="@color/colorPrimary"
+                android:text="Rs 0 only."/>
+
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="13dp"
+                android:fontFamily="@font/opificio"
+                android:textColor="@color/colorPrimary"
+                android:text="Mobile"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_margin="@dimen/_10sdp" android:weightSum="1" android:layout_gravity="center">
+
+                <ImageView android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/cashdelivery"/>
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="Online"
+                    android:layout_weight="0.2" android:layout_gravity="center"/>
+
+                <RadioButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:id="@+id/radio_online"
+                    android:textStyle="bold" android:textSize="@dimen/_14sdp" android:layout_weight="0.4" android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:paddingLeft="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="go_next"
+                android:background="@color/greenColor"
+                android:text="Continue"
+                android:textColor="@color/whiteColor" />
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/updae_acar"
+                android:paddingLeft="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/greenColor"
+                android:text="Update acar"
+                android:textColor="@color/whiteColor" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

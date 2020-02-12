@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="5"
+        >
+
+
+        <TextView
+            android:id="@+id/crop_name"
+            style="bold"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="SOYABEAN"
+            android:textColor="@color/blackColor"
+            android:textSize="20dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/tv_view_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/eye"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/payment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/download"
+            android:textColor="@color/colorPrimary"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/youtube"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</LinearLayout>

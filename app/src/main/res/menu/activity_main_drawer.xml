@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_nav_home"
+            android:title="@string/nav_home"
+            />
+        <!--<item
+            android:id="@+id/nav_recipe"
+            android:icon="@drawable/recipe_menu"
+            android:title="Recipes" />-->
+        <item android:title="@string/nav_user" android:id="@+id/nav_user">
+            <menu>
+                <item
+                    android:id="@+id/nav_myorders"
+                    android:icon="@drawable/ic_nav_order"
+                    android:title="@string/nav_order" />
+                <item
+                    android:id="@+id/nav_myprofile"
+
+                    android:icon="@drawable/ic_nav_profile"
+                    android:title="@string/nav_profile" />
+
+            </menu>
+        </item>
+
+        <item android:title="Product">
+        <menu>
+            <item
+                android:id="@+id/nav_trail_pop"
+                android:icon="@drawable/manbalancing"
+                android:title="@string/nav_trail_pop" />
+
+            <item
+                android:id="@+id/nav_narmm_pro"
+                android:icon="@drawable/box"
+                android:title="@string/nav_narmm_pro" />
+
+            <item
+                android:id="@+id/nav_whether"
+                android:icon="@drawable/sun"
+                android:title="@string/nav_whether" />
+
+            <item
+                android:id="@+id/nav_ask_an_expert"
+                android:icon="@drawable/expert"
+                android:title="@string/nav_ask_an_expert" />
+
+            <item
+                android:id="@+id/nav_helpline"
+                android:icon="@drawable/helpline"
+                android:title="@string/nav_helpline" />
+            <item
+                android:id="@+id/nav_local_retailer"
+                android:icon="@drawable/shop"
+                android:title="@string/nav_local_retailer" />
+
+            <item
+                android:id="@+id/nav_complain"
+                android:icon="@drawable/complain"
+                android:title="@string/nav_complain" />
+
+        </menu>
+        </item>
+
+
+        <item android:title="@string/app_name">
+            <menu>
+                <item
+                    android:id="@+id/nav_support"
+
+                    android:icon="@drawable/support"
+                    android:title="@string/nav_support" />
+                <item
+                    android:id="@+id/nav_aboutus"
+
+                    android:icon="@drawable/ic_nav_about"
+                    android:title="@string/nav_about" />
+                <item
+                    android:id="@+id/nav_policy"
+                    android:icon="@drawable/ic_nav_policy"
+                    android:title="@string/nav_terms" />
+                <item
+                    android:id="@+id/nav_review"
+
+                    android:icon="@drawable/ic_nav_review"
+                    android:title="@string/nav_review" />
+                <item
+                    android:id="@+id/nav_share"
+
+                    android:icon="@drawable/ic_nav_share"
+                    android:title="@string/nav_share" />
+                <item
+                    android:visible="false"
+                    android:id="@+id/nav_notify"
+                    android:icon="@drawable/percentage"
+                    android:title="@string/nav_notify" />
+            </menu>
+        </item>
+
+        <item android:title="">
+
+                <item
+                    android:id="@+id/nav_logout"
+
+                    android:icon="@drawable/ic_exit"
+                    android:title="@string/nav_logout" />
+
+        </item>
+    </group>
+</menu>

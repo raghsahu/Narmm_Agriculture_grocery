@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.drraisingh.narmm"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
+        quiet true
+
+        // Whether lint should set the exit code of the process if errors are found
+        abortOnError false
+
+        // Returns whether lint will only check for errors (ignoring warnings)
+        ignoreWarnings true
+
+        // Returns whether lint should check for fatal errors during release builds. Default is true.
+        // If issues with severity "fatal" are found, the release build is aborted.
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "16g"
+
+    }
+
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:28.0.0'
+
+    implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+
+    implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
+
+    implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
+
+    implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    //noinspection GradleCompatible
+
+    implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
+    implementation 'com.github.andyxialm:ColorDialog:1.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    testImplementation 'junit:junit:4.12'
+    implementation(name: 'peb-lib', ext: 'aar')
+
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+    implementation 'com.google.android.gms:play-services-gcm:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+
+    //dimensions
+    //
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+
+    implementation('com.paytm:pgplussdk:1.3.3') {
+        transitive = true;
+    }
+    implementation files('libs/jsoup-1.11.3.jar')
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+    //rx java fast networking
+    implementation 'com.amitshekhar.android:rx2-android-networking:1.0.2'
+    implementation 'com.amitshekhar.android:rx-android-networking:1.0.2'
+
+}
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

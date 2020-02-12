@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/tv_home_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/space_10"
+                android:background="@drawable/rounded_corner_border"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/search_msg" />-->
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/home_img_slider"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/space_10">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opificio"
+                    android:padding="@dimen/space_6"
+                    android:text="Company Product"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_18" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_party_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/grey_light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp">
+
+            </View>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/space_10">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opificio"
+                    android:padding="@dimen/space_6"
+                    android:text="@string/tv_home_cat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_18" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/rv_offer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/space_10"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category product"
+                    android:fontFamily="@font/opificio"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_18"
+                    android:textAllCaps="true"
+                    android:padding="@dimen/space_6"
+                    />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/rv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/space_10"
+                android:id="@+id/rl_home_view_allcat">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Products Category"
+                    android:fontFamily="@font/opificio"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_18"
+                    android:textAllCaps="true"
+                    android:padding="@dimen/space_6"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select category"
+                >
+
+            </TextView>
+
+            <Spinner
+                android:layout_margin="5dp"
+                android:layout_marginTop="@dimen/space_10"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:id="@+id/spin_category"
+                android:layout_weight="2"
+                android:background="@color/editTextBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:dropDownWidth="match_parent" />
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select company"
+                >
+
+            </TextView>
+
+            <Spinner
+                android:layout_margin="5dp"
+                android:layout_marginTop="@dimen/space_10"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:id="@+id/spin_comp"
+                android:layout_weight="2"
+                android:background="@color/editTextBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:dropDownWidth="match_parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_product"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,712 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+<data class=".ActivityRegistrationpageBinding">
+
+</data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.Registrationpage">
+    <!-- vertical ScrollView to make all the items or views scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <!-- LinearLayout Inside ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_weight="2"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo" />
+                <TextView
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:layout_weight="2"
+                    android:textAlignment="textStart"
+                    android:text="National Agriculture Research Marketing Pvt. Ltd."
+                    android:singleLine="false"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/blackColor"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="130dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:background="@drawable/crop"
+                    android:hint="Farmar Registration"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView1"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/per" />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/editTextBack"
+                    android:text="Upload image"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/firstLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                <EditText
+                    android:id="@+id/fullName"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:background="@color/editTextBack"
+                    android:hint="Full Name"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <EditText
+                android:id="@+id/fatherName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="4"
+                android:background="@color/editTextBack"
+                android:hint="Father Name"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/blackColor" />
+        </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/gen"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/gender"
+
+                    android:entries="@array/gender"
+                    android:background="@color/editTextBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGrp"
+                android:paddingLeft="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:layout_weight="4"
+                android:paddingRight="8dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="true"
+                    android:layout_weight="2"
+                    android:textSize="14dp"
+                    android:text="Male"
+                    />
+                <RadioButton
+                    android:id="@+id/radioF"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:checked="false"
+                    android:layout_weight="2"
+                    android:textSize="14dp"
+                    android:text="Female"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select date of birth"
+                >
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_date"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:entries="@array/dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_month"
+                    android:entries="@array/mm"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/editTextBack"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_year"
+                    android:entries="@array/yy"
+                    android:background="@color/editTextBack"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/house_no"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:background="@color/editTextBack"
+                    android:hint="House no. &amp; address"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+            </LinearLayout>
+
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select State &amp; Distt. "
+                >
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/fifthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+                <Spinner
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:id="@+id/state"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:background="@color/editTextBack"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:dropDownWidth="match_parent"  />
+
+                <Spinner
+                    android:layout_margin="5dp"
+                    android:id="@+id/dist"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:background="@color/editTextBack"
+                    android:layout_height="50dp"
+                    android:dropDownWidth="match_parent"  />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Tehsil &amp; Block "
+                >
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/fourthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <Spinner
+                    android:layout_margin="5dp"
+                    android:id="@+id/teh"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:background="@color/editTextBack"
+                    android:layout_height="50dp"
+                    android:dropDownWidth="match_parent"  />
+
+                <Spinner
+                    android:layout_margin="5dp"
+                    android:id="@+id/block"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:background="@color/editTextBack"
+                    android:layout_height="50dp"
+                    android:dropDownWidth="match_parent"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdLayout"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <EditText
+                    android:id="@+id/vill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:hint="Village"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+
+                <EditText
+                    android:id="@+id/pin"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:hint="Pin code"
+                    android:maxLength="6"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textColor="@color/blackColor" />
+
+
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+
+
+            <LinearLayout
+                android:id="@+id/sixthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <EditText
+                    android:id="@+id/mob"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:hint="Mobile"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+
+                <EditText
+                    android:id="@+id/adhar"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:hint="Adhar"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+            </LinearLayout>
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/seventhLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:hint="Email Id"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/blackColor" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView
+
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select total acar"
+                    >
+
+                </TextView>
+
+                <Spinner
+                    android:layout_marginTop="@dimen/space_10"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_acre"
+                    android:layout_weight="2"
+                    android:background="@color/editTextBack"
+                    android:entries="@array/hac"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:dropDownWidth="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:text="Select crop"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Select acar"
+                    android:textSize="16dp"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/f"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_corp1"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/corp1_acre"
+                    android:layout_weight="2"
+                    android:entries="@array/hac"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/spin_corp2"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+                <Spinner
+                    android:id="@+id/spin_corp2_qty"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_weight="2"
+                    android:entries="@array/hac"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/corp3"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+
+                <Spinner
+                    android:id="@+id/corp3_acre"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_weight="2"
+                    android:entries="@array/hac"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:id="@+id/corp_other"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+                <Spinner
+                    android:id="@+id/corpother_qty"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_weight="2"
+                    android:entries="@array/hac"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:dropDownWidth="match_parent" />
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:paddingLeft="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="go_next"
+                android:background="@color/greenColor"
+                android:text="Continue"
+                android:textColor="@color/whiteColor" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+</layout>

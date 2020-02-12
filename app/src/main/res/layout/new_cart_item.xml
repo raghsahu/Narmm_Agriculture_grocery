@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="116dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/canst_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_subcat_img"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@+id/iv_subcat_img"
+                app:layout_constraintRight_toLeftOf="@+id/iv_subcat_minus"
+                app:layout_constraintTop_toTopOf="@+id/iv_subcat_img">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="@dimen/space_3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opificio"
+                        android:text="Cart id: "
+
+                        android:textSize="@dimen/space_13"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_cart_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opificio"
+                        android:text="1"
+                        android:textSize="@dimen/space_13"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:fontFamily="@font/opificio"
+                        android:text="@string/currency"
+                        android:textSize="@dimen/space_13"
+
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_subcat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/opificio"
+                    android:maxLines="2"
+                    android:text="TextView"
+                    android:textSize="@dimen/space_17"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_sub_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:fontFamily="@font/opificio"
+                    android:text=""
+                    android:textSize="@dimen/space_13"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_subcat_plus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more" />
+
+            <Spinner
+                android:id="@+id/tv_subcat_contetiy"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/qty"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_subcat_plus"
+                app:layout_constraintRight_toLeftOf="@+id/iv_subcat_plus"
+                app:layout_constraintTop_toTopOf="@+id/iv_subcat_plus" />
+
+            <ImageView
+                android:id="@+id/iv_subcat_minus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_subcat_plus"
+                app:layout_constraintRight_toLeftOf="@+id/tv_subcat_contetiy"
+                app:layout_constraintTop_toTopOf="@+id/iv_subcat_plus"
+                app:srcCompat="@drawable/minus" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="@font/opificio"
+                android:gravity="center"
+                android:text="Total: "
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_subcat_minus"
+                app:layout_constraintRight_toRightOf="@+id/iv_subcat_plus"
+                app:layout_constraintTop_toBottomOf="@+id/iv_subcat_plus" />
+
+
+            <TextView
+                android:id="@+id/tv_subcat_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/out_stock"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/opificio"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Remove"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_subcat_update"
+                app:layout_constraintRight_toRightOf="@+id/iv_subcat_plus"
+                app:layout_constraintTop_toBottomOf="@+id/iv_subcat_plus" />
+
+            <TextView
+                android:id="@+id/tv_subcat_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/out_stock"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/opificio"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Update"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@+id/tv_subcat_out"
+                app:layout_constraintTop_toBottomOf="@+id/iv_subcat_plus" />
+
+            <ImageView
+                android:id="@+id/iv_subcat_remove"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cancel" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>
